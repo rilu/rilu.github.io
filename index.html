@@ -21,11 +21,29 @@
     <meta property="og:image:secure_url" content="https://humbleton.se/humbleton-logo.png" /
     <meta property="og:description" content="Humbleton AB is an IT consultancy firm based in Stockholm, Sweden" />
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <style>
+      body {
+        height:100%;
+        background: linear-gradient(0deg, #ddd, #fff 80%) fixed no-repeat;
+      }
+      #logo{
+        animation: shake 5s linear infinite;
+        -webkit-filter: drop-shadow( 10px 10px 10px #ccc );
+        filter: drop-shadow( 10px 10px 10px #ccc );
+      }
+      @keyframes shake { 
+        0%    { transform: rotate(0deg); }
+        25%   { transform: rotate(5deg); }
+        50%   { transform: rotate(0deg); }
+        75%   { transform: rotate(-5deg);}
+        100%  { transform: rotate(0deg); }
+      }
+    </style>
   </head>
   <body>
     <div id="wrapper" style="width:100%;height:100%;">
       <div id="inner" style="position:fixed;top: 50%;left: 50%;text-align:center; transform: translate(-50%, -50%);">
-        <object type="image/svg+xml" data="humbleton-logo.svg">
+        <object type="image/svg+xml" data="humbleton-logo.svg" id="logo">
           Your browser does not support SVG
         </object>
         <div id="contacts">
